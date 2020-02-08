@@ -1,0 +1,25 @@
+function sumAll(arr) {
+  
+  
+arr.sort(function(a, b){return a - b});
+
+  let n = arr[0] + 1;
+  let newArr = [];
+
+while(n<(arr[arr.length-1]))
+{
+  
+  newArr.push(n);
+  
+  n=n+1
+  
+  
+}
+
+arr = [...arr,...newArr]
+var result = arr.reduce((sum,number)=> sum+number)
+return result;
+
+  }
+
+sumAll([1, 4]);
