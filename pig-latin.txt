@@ -1,0 +1,18 @@
+function translatePigLatin(str) {
+  //var a = /[^aeiou]/gi
+ 
+ 
+ var b = str.match(/^(?=[a-z])[^aeiou]+/);//matching consonants cluster
+
+ if(b)
+ {
+ return ((str.substr(b[0].length,str.length))+b+"ay")
+ }
+else
+return (str+"way")
+
+   
+  
+}
+
+translatePigLatin("california");
