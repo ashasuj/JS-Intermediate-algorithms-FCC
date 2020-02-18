@@ -1,0 +1,21 @@
+function convertHTML(str) {
+  // &colon;&rpar;
+  
+//using switch case
+
+   var b = str.replace(/[&<>\""'']/g,function(input){
+     switch(input)
+     {
+       case "&":return "&amp;";break;
+       case "<": return "&lt;"; break;
+      case  ">" : return "&gt;";break;
+    case '"': return "&quot;";break;
+    case "'" :return "&apos;";break;
+   case  "<>":return "&lt;&gt;";break;
+     }
+   })
+ 
+  return b ;
+}
+
+convertHTML("Dolce & Gabbana");
