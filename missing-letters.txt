@@ -1,0 +1,33 @@
+function fearNotLetter(str) {
+  var last = str.charCodeAt(str.length-1)//gives last letter
+  var first = str.charCodeAt(0)//gives first letter
+  var missing = "";
+  
+  console.log(last-first)
+  console.log(str.length)
+
+  if((last-first)===(str.length-1))//to return undefined
+
+  {
+   return undefined;
+    
+  }
+
+  else
+  {
+
+  for(let i =last;i>first;i--)
+  {
+    //console.log(String.fromCharCode(i))
+if(str.includes(String.fromCharCode(i))===false)
+{
+  missing = String.fromCharCode(i)
+}
+  }
+return missing;
+  } 
+  
+  
+}
+
+fearNotLetter("abcdefghijklmnopqrstuvwxyz");
