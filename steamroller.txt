@@ -1,0 +1,23 @@
+function steamrollArray(arr) {
+  // I'm a steamroller, baby
+var newArr = arr.toString().replace(",,",",").split(",")
+////console.log(newArr)
+
+for(var i=0;i<newArr.length;i++)
+{
+  console.log(newArr[i])
+  if(newArr[i]=="[object Object]")
+  {
+    newArr[i]={}
+    }
+  if(isNaN(newArr[i])==true)//check if its a string
+  { 
+    newArr[i]=newArr[i]}
+  else 
+  {
+    newArr[i]=parseInt(newArr[i])//else convert to string
+  }
+}
+//console.log(newArr)
+return newArr
+}
